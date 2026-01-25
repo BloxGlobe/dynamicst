@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
 
   
-  base: './DYNAMICST/',
+  base: './',
 
   build: {
     outDir: 'dist',
