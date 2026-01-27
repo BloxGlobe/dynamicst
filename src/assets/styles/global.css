@@ -1,0 +1,6 @@
+/* Import all styles */
+@import './foundation.css';
+@import './footer.css';
+@import './sidebar.css';
+
+/* Additional global styles can go here */

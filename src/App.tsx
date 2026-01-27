@@ -1,5 +1,4 @@
-import './assets/styles/foundation.css'
-import './assets/styles/sidebar.css'
+import './assets/styles/global.css'
 import Landing from './components/landing/Landing.tsx'
 
 function App() {
