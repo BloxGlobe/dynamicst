@@ -1,17 +1,9 @@
-import './components/styles/foundation.css'
-import './components/styles/footer.css'
-import './components/styles/sidebar.css'
-import './components/landing/landing.tsx'
+import './assets/styles/foundation.css'
+import './assets/styles/sidebar.css'
+import Landing from './components/landing/Landing.tsx'
 
 function App() {
-  return (
-    <>
-      <div className="app">
-        <h1>DynamicST</h1>
-        <p>Let's build your app!</p>
-      </div>
-    </>
-  )
+  return <Landing />
 }
 
 export default App
