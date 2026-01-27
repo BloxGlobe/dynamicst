@@ -1,59 +1,78 @@
 import React from 'react';
 
-const Features: React.FC = () => {
+export const Features: React.FC = () => {
   const features = [
     {
-      icon: '💬',
-      title: 'Secure Messaging',
-      description: 'End-to-end encrypted messaging keeps your conversations private and secure.',
-      color: 'from-blue-500 to-blue-600'
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          <path d="M9 10h.01M12 10h.01M15 10h.01" strokeLinecap="round" />
+        </svg>
+      ),
+      title: 'Encrypted Messaging',
+      description: 'End-to-end encryption ensures your conversations remain completely private and secure.',
     },
     {
-      icon: '👥',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="12" cy="8" r="4" />
+          <circle cx="20" cy="14" r="3" />
+          <circle cx="4" cy="14" r="3" />
+          <path d="M12 12v3M16 14l-2-1M8 14l2-1" strokeLinecap="round" />
+        </svg>
+      ),
       title: 'Real-time Collaboration',
-      description: 'Work together seamlessly with live updates and instant synchronization.',
-      color: 'from-orange-500 to-orange-600'
+      description: 'Work together seamlessly with instant synchronization and live updates across all devices.',
     },
     {
-      icon: '🛡️',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      ),
       title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption and compliance standards.',
-      color: 'from-purple-500 to-purple-600'
+      description: 'Military-grade security protocols with advanced compliance standards for your peace of mind.',
     },
     {
-      icon: '⚡',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      ),
       title: 'Lightning Fast',
-      description: 'Optimized performance ensures smooth experience even with large teams.',
-      color: 'from-green-500 to-green-600'
+      description: 'Optimized performance and infrastructure ensures blazing-fast speeds even with large teams.',
     }
   ];
 
   return (
-    <section id="features" className="py-20 bg-[#0f0f0f]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+    <section id="features" className="features-section">
+      {/* Background Elements */}
+      <div className="features-glow features-glow-left"></div>
+      <div className="features-glow features-glow-right"></div>
+
+      <div className="features-container">
+        <div className="features-header">
+          <div className="features-badge">
+            <span>✨ Powerful Features</span>
+          </div>
+          <h2 className="features-title">
             Everything you need to{' '}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-500 to-orange-500">
-              succeed
-            </span>
+            <span className="features-title-gradient">succeed</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Powerful features designed to help teams collaborate efficiently and securely
+          <p className="features-description">
+            Built by a studio dedicated to secure communication and collaboration
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="features-grid">
           {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-linear-to-b from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 hover:border-gray-600 transition-all hover:transform hover:scale-105"
-            >
-              <div className={`w-12 h-12 bg-linear-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4 text-2xl`}>
+            <div key={index} className="feature-card">
+              <div className="feature-icon">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
+              <h3 className="feature-title">{feature.title}</h3>
+              <p className="feature-description">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -62,4 +81,3 @@ const Features: React.FC = () => {
   );
 };
 
-export { Features };

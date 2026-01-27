@@ -1,71 +1,76 @@
 import React from 'react';
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0f0f0f] border-t border-gray-800 py-12">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-grid">
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-linear-to-br from-blue-500 to-orange-500 rounded-lg transform rotate-12"></div>
-              <span className="text-white font-bold text-xl">DynamicNet</span>
+          <div className="footer-brand">
+            <div className="footer-logo">
+              <svg 
+                className="footer-logo-icon" 
+                viewBox="0 0 24 24" 
+                fill="currentColor"
+                style={{ color: '#3b82f6' }}
+              >
+                <path d="M18.926 23.998 12.003.008l-6.951 23.99h13.874zM15.93 22H8.004l3.941-13.56L15.93 22zM.008 18.102l6.72-1.956-4.527 5.88-.193-3.924zm17.236-1.956 6.72 1.956-.193 3.924-4.527-5.88-2.027-5.88z"/>
+              </svg>
+              <span className="footer-logo-text">DynamicNet</span>
             </div>
-            <p className="text-gray-400 text-sm">
+            <p className="footer-tagline">
               Reimagine the way people collaborate
             </p>
           </div>
 
           {/* Product */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Product</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Features</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Pricing</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Security</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Roadmap</a></li>
+          <div className="footer-section">
+            <h3>Product</h3>
+            <ul className="footer-links">
+              <li><a href="#features">Features</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#security">Security</a></li>
+              <li><a href="#roadmap">Roadmap</a></li>
             </ul>
           </div>
 
           {/* Company */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">About</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Careers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Contact</a></li>
+          <div className="footer-section">
+            <h3>Company</h3>
+            <ul className="footer-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#careers">Careers</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
 
           {/* Resources */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Documentation</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">API Reference</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Support</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Community</a></li>
+          <div className="footer-section">
+            <h3>Resources</h3>
+            <ul className="footer-links">
+              <li><a href="#docs">Documentation</a></li>
+              <li><a href="#api">API Reference</a></li>
+              <li><a href="#support">Support</a></li>
+              <li><a href="#community">Community</a></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm">
+        <div className="footer-bottom">
+          <p className="footer-copyright">
             © {currentYear} DynamicNet. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</a>
+          <div className="footer-legal">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#cookies">Cookie Policy</a>
           </div>
         </div>
       </div>
     </footer>
   );
 };
-
-export { Footer };

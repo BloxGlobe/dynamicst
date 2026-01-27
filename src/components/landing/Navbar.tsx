@@ -4,7 +4,7 @@ interface NavbarProps {
   onAuthClick: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ onAuthClick }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onAuthClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -16,34 +16,34 @@ const Navbar: React.FC<NavbarProps> = ({ onAuthClick }) => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-[#0f0f0f]/95 backdrop-blur-md border-b border-gray-800' : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
+      <div className="navbar-container">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-linear-to-br from-blue-500 to-orange-500 rounded-lg transform rotate-12"></div>
-          <span className="text-white font-bold text-xl">DynamicNet</span>
+        <div className="navbar-logo">
+          <svg 
+            className="navbar-logo-icon" 
+            viewBox="0 0 24 24" 
+            fill="currentColor"
+            style={{ color: '#3b82f6' }}
+          >
+            <path d="M18.926 23.998 12.003.008l-6.951 23.99h13.874zM15.93 22H8.004l3.941-13.56L15.93 22zM.008 18.102l6.72-1.956-4.527 5.88-.193-3.924zm17.236-1.956 6.72 1.956-.193 3.924-4.527-5.88-2.027-5.88z"/>
+          </svg>
+          <span className="navbar-logo-text">DynamicNet</span>
         </div>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex items-center gap-8">
-          <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
-          <a href="#about" className="text-gray-300 hover:text-white transition-colors">About</a>
-          <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
-          <a href="#docs" className="text-gray-300 hover:text-white transition-colors">Docs</a>
+        <div className="navbar-links">
+          <a href="#features" className="navbar-link">Features</a>
+          <a href="#about" className="navbar-link">About</a>
+          <a href="#pricing" className="navbar-link">Pricing</a>
+          <a href="#docs" className="navbar-link">Docs</a>
         </div>
 
         {/* Auth Button */}
-        <button
-          onClick={onAuthClick}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-        >
+        <button onClick={onAuthClick} className="navbar-auth-btn">
           Login / Register
         </button>
       </div>
     </nav>
   );
 };
-
-export { Navbar };
