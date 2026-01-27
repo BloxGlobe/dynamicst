@@ -6,7 +6,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onGetStarted }) => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a] pt-16">
+    <section className="min-h-screen flex items-center justify-center bg-linear-to-b from-[#0f0f0f] to-[#1a1a1a] pt-16">
       <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Text Content */}
         <div className="space-y-6">
@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({ onGetStarted }) => {
           
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
             Reimagine the way people{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-orange-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-500 to-orange-500">
               collaborate
             </span>
           </h1>
@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({ onGetStarted }) => {
           <div className="flex gap-4 pt-4">
             <button
               onClick={onGetStarted}
-              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg font-semibold transition-all transform hover:scale-105"
+              className="px-8 py-3 bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg font-semibold transition-all transform hover:scale-105"
             >
               Start Building
             </button>
@@ -41,8 +41,8 @@ const Hero: React.FC<HeroProps> = ({ onGetStarted }) => {
 
         {/* Right: Visual Element */}
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-3xl blur-3xl"></div>
-          <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700">
+          <div className="absolute inset-0 bg-linear-to-r from-blue-500/20 to-orange-500/20 rounded-3xl blur-3xl"></div>
+          <div className="relative bg-linear-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700">
             <div className="space-y-4">
               {/* Mock UI Elements */}
               <div className="flex items-center gap-3 bg-gray-800/50 rounded-lg p-4">

@@ -22,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({ onAuthClick }) => {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-orange-500 rounded-lg transform rotate-12"></div>
+          <div className="w-8 h-8 bg-linear-to-br from-blue-500 to-orange-500 rounded-lg transform rotate-12"></div>
           <span className="text-white font-bold text-xl">DynamicNet</span>
         </div>
 
