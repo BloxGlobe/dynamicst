@@ -5,7 +5,7 @@ import { Features } from './Features';
 import { CTA } from './CTA';
 import { Footer } from '../layout/Footer';
 import { LandingLayout } from '../layout/LandingLayout';
-import './landing.css';
+
 
 const Landing: React.FC = () => {
   const [showAuthModal, setShowAuthModal] = useState(false);
