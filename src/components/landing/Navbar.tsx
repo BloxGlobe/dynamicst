@@ -33,10 +33,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onAuthClick }) => {
 
         {/* Navigation Links */}
         <div className="navbar-links">
-          <a href="#features" className="navbar-link">About</a>
-          <a href="#about" className="navbar-link">Doc's</a>
-          <a href="#pricing" className="navbar-link">Resource's</a>
-          <a href="#docs" className="navbar-link">Pricing</a>
+          <a href="#about" className="navbar-link">About</a>
+          <a href="#docs" className="navbar-link">Doc's</a>
+          <a href="#features" className="navbar-link">Feature's</a>
+          <a href="#pricing" className="navbar-link">Pricing</a>
+          <a href="#resources" className="navbar-link">Resource's</a>
         </div>
 
         {/* Auth Button */}
