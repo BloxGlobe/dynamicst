@@ -19,7 +19,7 @@ export const Hero: React.FC<HeroProps> = ({
         {/* Left: Text Content */}
         <div className="hero-content">
           <div className="hero-badge">
-            <span>✨ Welcome to DynamicNet</span>
+            <span>💝 Welcome to DynamicNet</span>
           </div>
 
           <h1 className="hero-title">
@@ -28,8 +28,8 @@ export const Hero: React.FC<HeroProps> = ({
           </h1>
 
           <p className="hero-description">
-            A next-generation studio providing end-to-end encrypted communication
-            and real-time collaboration tools. Build secure connections that
+            A studio that provides end-to-end encrypted communication, resources to improve studies
+            and real-time collaboration tools. Built secure connections that
             matter.
           </p>
 

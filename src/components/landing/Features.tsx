@@ -31,8 +31,8 @@ export const Features: React.FC = () => {
           <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       ),
-      title: 'Enterprise Security',
-      description: 'Military-grade security protocols with advanced compliance standards for your peace of mind.',
+      title: 'Secured Calls',
+      description: 'All calls are protected with advanced security protocols to keep your data safe.',
     },
     {
       icon: (
@@ -40,8 +40,8 @@ export const Features: React.FC = () => {
           <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       ),
-      title: 'Lightning Fast',
-      description: 'Optimized performance and infrastructure ensures blazing-fast speeds even with large teams.',
+      title: 'Optimized Performance',
+      description: 'Experience lightning-fast load times and smooth interactions, even on low bandwidth connections.',
     }
   ];
 
@@ -54,14 +54,14 @@ export const Features: React.FC = () => {
       <div className="features-container">
         <div className="features-header">
           <div className="features-badge">
-            <span>✨ Powerful Features</span>
+            <span>💝 Lovely features</span>
           </div>
           <h2 className="features-title">
             Everything you need to{' '}
-            <span className="features-title-gradient">succeed</span>
+            <span className="features-title-gradient">excell</span>
           </h2>
           <p className="features-description">
-            Built by a studio dedicated to secure communication and collaboration
+            Built by a studio dedicated to secure communication, collaboration & productivity.
           </p>
         </div>
 

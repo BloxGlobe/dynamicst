@@ -23,9 +23,9 @@ const Landing: React.FC = () => {
       {showAuthModal && (
         <div className="auth-modal-overlay">
           <div className="auth-modal">
-            <h2 className="auth-modal-title">Welcome to DynamicNet</h2>
+            <h2 className="auth-modal-title">Welcome to DynamicNet!</h2>
             <p className="auth-modal-text">
-              Sign up or log in to start collaborating with your team.
+              Register or log in to access the main site.
             </p>
             <div className="auth-modal-buttons">
               <button
