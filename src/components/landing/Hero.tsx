@@ -48,15 +48,15 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Stats */}
           <div className="hero-stats">
             <div className="hero-stat">
-              <div className="hero-stat-value">10+</div>
+              <div className="hero-stat-value">15+</div>
               <div className="hero-stat-label">Active Users</div>
             </div>
             <div className="hero-stat">
-              <div className="hero-stat-value">56%</div>
+              <div className="hero-stat-value">78%</div>
               <div className="hero-stat-label">Uptime</div>
             </div>
             <div className="hero-stat">
-              <div className="hero-stat-value">10/hr</div>
+              <div className="hero-stat-value">24/7</div>
               <div className="hero-stat-label">Support</div>
             </div>
           </div>
