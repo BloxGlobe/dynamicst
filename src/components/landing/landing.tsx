@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Navbar } from './Navbar';
 import { Hero } from './Hero';
 import { Features } from './Features';
-import { CTA } from './CTA';
 import { Footer } from '../layout/Footer';
 import { LandingLayout } from '../layout/LandingLayout';
 
@@ -19,7 +18,6 @@ const Landing: React.FC = () => {
       <Navbar onAuthClick={handleAuthClick} />
       <Hero />  
       <Features />
-      <CTA />
       <Footer />
 
       {showAuthModal && (
