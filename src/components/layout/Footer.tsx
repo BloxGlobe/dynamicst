@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
               <span className="footer-logo-text">DynamicNet</span>
             </div>
             <p className="footer-tagline">
-              Reimagine the way people collaborate
+              Reimagining the way people work together
             </p>
           </div>
 
