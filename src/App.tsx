@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Landing from './components/landing/Landing';
 import { Dashboard } from './components/dashboard/dashboard';
 import { AuthModal } from './components/auth/AuthModal';
@@ -7,11 +7,6 @@ import type { User } from './lib/types';
 
 // Import all CSS
 import './assets/styles/global.css';
-import './assets/styles/foundation.css';
-import './assets/styles/footer.css';
-import './assets/styles/sidebar.css';
-import './assets/styles/dashboard.css';
-import './components/auth/auth.css';
 
 function App() {
   const { isAuthenticated, user, loading, login, logout } = useAuth();
