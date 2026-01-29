@@ -54,11 +54,11 @@ export const Features: React.FC = () => {
       <div className="features-container">
         <div className="features-header">
           <div className="features-badge">
-            <span>💝 Lovely features</span>
+            <span>📖 features</span>
           </div>
           <h2 className="features-title">
             Everything you need to{' '}
-            <span className="features-title-gradient">excell</span>
+            <span className="features-title-gradient">know</span>
           </h2>
           <p className="features-description">
             Built by a studio dedicated to secure communication, collaboration & productivity.

@@ -19,18 +19,16 @@ export const Hero: React.FC<HeroProps> = ({
         {/* Left: Text Content */}
         <div className="hero-content">
           <div className="hero-badge">
-            <span>💝 Welcome to DynamicNet</span>
+            <span>👋Welcome to DynamicNet</span>
           </div>
 
           <h1 className="hero-title">
-            Reimagine the way people{" "}
+            Reimagining the way people{" "}
             <span className="hero-title-gradient">collaborate</span>
           </h1>
 
           <p className="hero-description">
-            A studio that provides end-to-end encrypted communication, resources to improve studies
-            and real-time collaboration tools. Built secure connections that
-            matter.
+           Secure communication, learning, and collaboration—built to matter.
           </p>
 
           <div className="hero-buttons">
@@ -48,15 +46,15 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Stats */}
           <div className="hero-stats">
             <div className="hero-stat">
-              <div className="hero-stat-value">15+</div>
+              <div className="hero-stat-value">1+</div>
               <div className="hero-stat-label">Active Users</div>
             </div>
             <div className="hero-stat">
-              <div className="hero-stat-value">78%</div>
+              <div className="hero-stat-value">100%</div>
               <div className="hero-stat-label">Uptime</div>
             </div>
             <div className="hero-stat">
-              <div className="hero-stat-value">24/7</div>
+              <div className="hero-stat-value">1hr</div>
               <div className="hero-stat-label">Support</div>
             </div>
           </div>
