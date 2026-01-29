@@ -2,5 +2,8 @@
 @import './foundation.css';
 @import './footer.css';
 @import './sidebar.css';
+@import './dashboard.css';
+@import './auth.css';
+
 
 /* Additional global styles can go here */
