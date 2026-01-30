@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Landing from './components/landing/Landing';
 import { Dashboard } from './components/dashboard/dashboard';
 import { AuthModal } from './components/auth/AuthModal';
@@ -7,6 +8,8 @@ import type { User } from './lib/types';
 
 // Import all CSS
 import './assets/styles/global.css';
+import './assets/styles/dashboard.css';
+import './assets/styles/sidebar.css';
 
 function App() {
   const { isAuthenticated, user, loading, login, logout } = useAuth();
@@ -21,37 +24,36 @@ function App() {
     logout();
   };
 
-  // Show loading state while checking auth
   if (loading) {
     return (
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '100vh',
-        background: '#000000',
-        color: '#ffffff',
-        fontSize: '16px'
-      }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', background: '#000', color: '#fff', fontSize: '16px' }}>
         <p>Loading...</p>
       </div>
     );
   }
 
-  // Show dashboard if authenticated
-  if (isAuthenticated && user) {
-    return <Dashboard user={user} onLogout={handleLogout} />;
-  }
-
-  // Show landing page if not authenticated
   return (
     <>
-      <Landing onAuthClick={() => setShowAuthModal(true)} />
-      {showAuthModal && (
-        <AuthModal
-          onClose={() => setShowAuthModal(false)}
-          onSuccess={handleAuthSuccess}
+      <Routes>
+        <Route
+          path="/"
+          element={<Landing onAuthClick={() => setShowAuthModal(true)} />}
         />
+        <Route
+          path="/dashboard/*"
+          element={
+            isAuthenticated && user ? (
+              <Dashboard user={user} onLogout={handleLogout} />
+            ) : (
+              <Navigate to="/" replace />
+            )
+          }
+        />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+
+      {showAuthModal && (
+        <AuthModal onClose={() => setShowAuthModal(false)} onSuccess={handleAuthSuccess} />
       )}
     </>
   );
