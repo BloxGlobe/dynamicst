@@ -13,7 +13,7 @@ function App() {
   const [showAuthModal, setShowAuthModal] = useState(false);
 
   const handleAuthSuccess = (authenticatedUser: User) => {
-    login(authenticatedUser, 'mock-token');
+    login(authenticatedUser, `token-${authenticatedUser.id}`);
     setShowAuthModal(false);
   };
 
@@ -29,8 +29,9 @@ function App() {
         alignItems: 'center',
         justifyContent: 'center',
         minHeight: '100vh',
-        background: '#0a0a0a',
-        color: '#fff'
+        background: '#000000',
+        color: '#ffffff',
+        fontSize: '16px'
       }}>
         <p>Loading...</p>
       </div>
