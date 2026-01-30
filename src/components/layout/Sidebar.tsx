@@ -21,7 +21,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activePage, onPageChange, user
         >
           <path d="M18.926 23.998 12.003.008l-6.951 23.99h13.874zM15.93 22H8.004l3.941-13.56L15.93 22zM.008 18.102l6.72-1.956-4.527 5.88-.193-3.924zm17.236-1.956 6.72 1.956-.193 3.924-4.527-5.88-2.027-5.88z"/>
         </svg>
-        <span className="sidebar-title">Dashboard</span>
+        <span className="sidebar-title">Dynamic'Site</span>
       </div>
 
       {/* User */}
