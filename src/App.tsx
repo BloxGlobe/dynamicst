@@ -37,7 +37,13 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Landing onAuthClick={() => setShowAuthModal(true)} />}
+          element={
+            isAuthenticated && user ? (
+              <Navigate to="/dashboard/home" replace />
+            ) : (
+              <Landing onAuthClick={() => setShowAuthModal(true)} />
+            )
+          }
         />
         <Route
           path="/dashboard/*"
