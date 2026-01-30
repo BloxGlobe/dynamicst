@@ -4,6 +4,6 @@ export interface Announcement {
   title: string;
   content?: string;
   author?: string;
-  avatars: string[]; // avatar URLs
+  avatars: string[];
   link?: string;
 }
