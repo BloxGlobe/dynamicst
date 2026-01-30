@@ -26,12 +26,12 @@ const PAGE_TITLES: Record<PageKey, string> = {
   store: 'Store',
   forum: 'Forum',
   finances: 'Finances',
-  analytics: 'Analytics',
-  ads: 'Ads',
   tools: 'All Tools',
   messages: 'Messages',
   settings: 'Settings',
   profile: 'Profile',
+  ads: 'ads', 
+  analytics: 'analytics',
 };
 
 function pathToPageKey(pathname: string): PageKey {
