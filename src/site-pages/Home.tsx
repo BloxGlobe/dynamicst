@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ExperienceCard } from '../components/dashboard/ExperienceCard';
+import { AnnouncementCard } from '../components/dashboard/AnnouncementCard';
 import type { Experience } from '../lib/types';
 import { experiencesAPI } from '../lib/api/experiences.api';
 
@@ -27,10 +28,13 @@ export const Home: React.FC = () => {
 
   return (
     <div className="dashboard-home">
+      {/* Experiences */}
       <div className="dashboard-section">
         <div className="dashboard-section-header">
           <h2 className="dashboard-section-title">Experiences</h2>
-          <button className="dashboard-btn-primary">Create Experience</button>
+          <button className="dashboard-btn-primary">
+            Create Experience
+          </button>
         </div>
 
         <div className="experiences-grid">
@@ -40,13 +44,11 @@ export const Home: React.FC = () => {
         </div>
       </div>
 
+      {/* Announcements */}
       <div className="dashboard-section">
         <h2 className="dashboard-section-title">Announcements</h2>
         <div className="announcements-grid">
-          <div className="announcement-card">
-            <p className="announcement-date">JAN 28, 2026</p>
-            <h3 className="announcement-title">Welcome to DynamicNet!</h3>
-          </div>
+          <AnnouncementCard />
         </div>
       </div>
     </div>
