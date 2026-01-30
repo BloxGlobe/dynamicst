@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { LoginForm } from './LoginForm';
 import { RegisterForm } from './RegisterForm';
@@ -65,19 +66,37 @@ export const AuthModal: React.FC<AuthModalProps> = ({ onClose, onSuccess }) => {
       <div className="auth-modal-container" onClick={(e) => e.stopPropagation()}>
         <button onClick={onClose} className="auth-modal-close">×</button>
         
-        {mode === 'login' ? (
-          <LoginForm
-            onSubmit={handleLogin}
-            onSwitchToRegister={() => setMode('register')}
-            loading={loading}
+        {/* Left Side - Form */}
+        <div className="auth-modal-form-side">
+          {mode === 'login' ? (
+            <LoginForm
+              onSubmit={handleLogin}
+              onSwitchToRegister={() => setMode('register')}
+              loading={loading}
+            />
+          ) : (
+            <RegisterForm
+              onSubmit={handleRegister}
+              onSwitchToLogin={() => setMode('login')}
+              loading={loading}
+            />
+          )}
+        </div>
+
+        {/* Right Side - Image */}
+        <div className="auth-modal-image-side">
+          <img 
+            src="https://imgs.search.brave.com/K4fg3w_HKWHZfbP2ieT1bF-bgGUOtW4rDnqbU9Pz3yc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvcm9i/bG94LWJhY2tncm91/bmQtcm94dzd2Y25i/c3N6ZndkMS5qcGc" 
+            alt="DynamicNet Platform" 
+            className="auth-modal-image" 
           />
-        ) : (
-          <RegisterForm
-            onSubmit={handleRegister}
-            onSwitchToLogin={() => setMode('login')}
-            loading={loading}
-          />
-        )}
+          <div className="auth-modal-image-overlay">
+            <h2 className="auth-modal-image-title">Welcome to DynamicNet</h2>
+            <p className="auth-modal-image-text">
+              The next generation platform for secure collaboration and encrypted communication
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
