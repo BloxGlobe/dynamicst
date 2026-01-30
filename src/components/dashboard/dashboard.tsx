@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { DashboardLayout } from '../layout/DashboardLayout';
+import '../common/index';
 import { Home } from '../../site-pages/Home';
 import type { PageKey, User } from '../../lib/types';
 
