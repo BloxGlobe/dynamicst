@@ -1,36 +1,36 @@
 /* DynamicNet Footer
-   Corporate professional design */
+   Corporate professional design with refined spacing */
 
 footer {
   background: #000000;
-  border-top: 1px solid #1a1a1a;
-  padding: 80px 0 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 96px 0 48px;
 }
 
 .footer-container {
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 48px;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 60px;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 72px;
 }
 
 @media (max-width: 1024px) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 56px;
   }
 }
 
 @media (max-width: 640px) {
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 48px;
   }
 }
 
@@ -38,47 +38,58 @@ footer {
 .footer-brand {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  cursor: pointer;
+  transition: opacity 250ms ease;
+}
+
+.footer-logo:hover {
+  opacity: 0.8;
 }
 
 .footer-logo-icon {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
 }
 
 .footer-logo-text {
   color: #ffffff;
   font-weight: 600;
-  font-size: 20px;
-  letter-spacing: -0.02em;
+  font-size: 21px;
+  letter-spacing: -0.03em;
 }
 
 .footer-tagline {
-  color: #6B7280;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
-  line-height: 1.6;
-  max-width: 300px;
+  line-height: 1.65;
+  max-width: 320px;
+  letter-spacing: -0.01em;
 }
 
 /* Footer Sections */
 .footer-section {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 
 .footer-section h3 {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   margin: 0;
   letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-links {
@@ -87,15 +98,17 @@ footer {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .footer-links li a {
-  color: #9CA3AF;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 15px;
   font-weight: 500;
-  transition: color 200ms ease;
+  transition: color 250ms ease;
   text-decoration: none;
+  letter-spacing: -0.01em;
+  display: inline-block;
 }
 
 .footer-links li a:hover {
@@ -104,12 +117,12 @@ footer {
 
 /* Footer Bottom */
 .footer-bottom {
-  border-top: 1px solid #1a1a1a;
-  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 @media (min-width: 768px) {
@@ -120,40 +133,69 @@ footer {
 }
 
 .footer-copyright {
-  color: #6B7280;
+  color: rgba(255, 255, 255, 0.45);
   font-size: 14px;
   text-align: center;
+  letter-spacing: -0.01em;
+  font-weight: 500;
 }
 
 .footer-legal {
   display: flex;
-  gap: 32px;
+  gap: 36px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .footer-legal a {
-  color: #9CA3AF;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   font-weight: 500;
-  transition: color 200ms ease;
+  transition: color 250ms ease;
   text-decoration: none;
+  letter-spacing: -0.01em;
 }
 
 .footer-legal a:hover {
   color: #ffffff;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  footer {
+    padding: 80px 0 40px;
+  }
+
+  .footer-container {
+    padding: 0 28px;
+  }
+
+  .footer-grid {
+    gap: 48px;
+    margin-bottom: 64px;
+  }
+
+  .footer-legal {
+    gap: 28px;
+  }
+}
+
 @media (max-width: 640px) {
   footer {
-    padding: 60px 0 32px;
+    padding: 72px 0 36px;
   }
 
   .footer-container {
     padding: 0 24px;
   }
 
+  .footer-grid {
+    gap: 44px;
+  }
+
   .footer-legal {
-    gap: 20px;
+    gap: 24px;
+    flex-direction: column;
+    align-items: center;
   }
 }
