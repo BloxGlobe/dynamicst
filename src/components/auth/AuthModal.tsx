@@ -1,4 +1,7 @@
-
+// ==========================================
+// FILE: src/components/auth/AuthModal.tsx
+// Updated with logo instead of image
+// ==========================================
 import { useState } from 'react';
 import { LoginForm } from './LoginForm';
 import { RegisterForm } from './RegisterForm';
@@ -83,17 +86,33 @@ export const AuthModal: React.FC<AuthModalProps> = ({ onClose, onSuccess }) => {
           )}
         </div>
 
-        {/* Right Side - Image */}
-        <div className="auth-modal-image-side">
-          <img 
-            src="https://imgs.search.brave.com/K4fg3w_HKWHZfbP2ieT1bF-bgGUOtW4rDnqbU9Pz3yc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvcm9i/bG94LWJhY2tncm91/bmQtcm94dzd2Y25i/c3N6ZndkMS5qcGc" 
-            alt="DynamicNet Platform" 
-            className="auth-modal-image" 
-          />
-          <div className="auth-modal-image-overlay">
-            <h2 className="auth-modal-image-title">Welcome to DynamicNet</h2>
-            <p className="auth-modal-image-text">
-              The next generation platform for secure collaboration and encrypted communication
+        {/* Right Side - Logo & Branding */}
+        <div className="auth-modal-brand-side">
+          <div className="auth-modal-brand-content">
+            <svg 
+              className="auth-modal-logo" 
+              viewBox="0 0 100 100" 
+              fill="none"
+            >
+              {/* Custom DynamicNet Logo */}
+              <circle cx="50" cy="50" r="45" fill="url(#gradient1)" />
+              <path 
+                d="M 30 50 L 50 30 L 70 50 L 50 70 Z" 
+                fill="white" 
+                opacity="0.9"
+              />
+              <circle cx="50" cy="50" r="8" fill="white" />
+              <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#3b82f6" />
+                  <stop offset="100%" stopColor="#2563eb" />
+                </linearGradient>
+              </defs>
+            </svg>
+            
+            <h1 className="auth-modal-brand-name">DynamicNet</h1>
+            <p className="auth-modal-brand-tagline">
+              Secure collaboration for modern teams
             </p>
           </div>
         </div>
