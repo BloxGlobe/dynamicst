@@ -1,7 +1,3 @@
-// ==========================================
-// FILE: src/components/auth/AuthModal.tsx
-// Updated with logo instead of image
-// ==========================================
 import { useState } from 'react';
 import { LoginForm } from './LoginForm';
 import { RegisterForm } from './RegisterForm';
@@ -91,23 +87,11 @@ export const AuthModal: React.FC<AuthModalProps> = ({ onClose, onSuccess }) => {
           <div className="auth-modal-brand-content">
             <svg 
               className="auth-modal-logo" 
-              viewBox="0 0 100 100" 
-              fill="none"
+              viewBox="0 0 24 24" 
+              fill="currentColor"
+              style={{ color: '#3b82f6' }}
             >
-              {/* Custom DynamicNet Logo */}
-              <circle cx="50" cy="50" r="45" fill="url(#gradient1)" />
-              <path 
-                d="M 30 50 L 50 30 L 70 50 L 50 70 Z" 
-                fill="white" 
-                opacity="0.9"
-              />
-              <circle cx="50" cy="50" r="8" fill="white" />
-              <defs>
-                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#3b82f6" />
-                  <stop offset="100%" stopColor="#2563eb" />
-                </linearGradient>
-              </defs>
+              <path d="M18.926 23.998 12.003.008l-6.951 23.99h13.874zM15.93 22H8.004l3.941-13.56L15.93 22zM.008 18.102l6.72-1.956-4.527 5.88-.193-3.924zm17.236-1.956 6.72 1.956-.193 3.924-4.527-5.88-2.027-5.88z"/>
             </svg>
             
             <h1 className="auth-modal-brand-name">DynamicNet</h1>
