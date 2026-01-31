@@ -3,7 +3,7 @@ export default function Home() {
     <div className="dashboard-home">
       {/* Dashboard Section */}
       <div className="dashboard-section">
-        {/* Content for the main dashboard section */}
+        {/* Main dashboard content goes here */}
       </div>
 
       {/* Announcements Section */}

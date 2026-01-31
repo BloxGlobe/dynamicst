@@ -1,8 +1,7 @@
-import React from 'react';
 import { Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { DashboardLayout } from '../layout/DashboardLayout';
 import '../common/index';
-import { Home } from '../../site-pages/Home';
+import Home from '../../site-pages/Home';          
 import Creations from '../../site-pages/Creations';
 import Learn from '../../site-pages/Learn';
 import Store from '../../site-pages/Store';
@@ -30,16 +29,15 @@ const PAGE_TITLES: Record<PageKey, string> = {
   messages: 'Messages',
   settings: 'Settings',
   profile: 'Profile',
-  ads: 'ads', 
-  analytics: 'analytics',
+  ads: 'Ads', 
+  analytics: 'Analytics',
 };
 
 function pathToPageKey(pathname: string): PageKey {
   // Expect formats: /dashboard, /dashboard/ or /dashboard/<key>
   const parts = pathname.split('/').filter(Boolean);
   const key = parts[1] as PageKey | undefined;
-  // default to 'home' if no subpath
-  return (key && PAGE_TITLES[key] ? key : 'home');
+  return key && PAGE_TITLES[key] ? key : 'home'; // use literal directly
 }
 
 export const Dashboard: React.FC<DashboardProps> = ({ user, onLogout }) => {
