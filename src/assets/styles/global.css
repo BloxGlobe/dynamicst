@@ -4,7 +4,8 @@
 @import './sidebar.css';
 @import './dashboard.css';
 @import './auth.css';
-@import './avatar.css'
+@import './avatar.css';
+@import "./searchbar.css";
 
 
 /* Additional global styles can go here */
