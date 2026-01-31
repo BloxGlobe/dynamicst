@@ -1,3 +1,9 @@
+import Searchbar from "../components/scripts/Searchbar";
+
 export default function Learn() {
-  return <div>Learn Page</div>;
+  return (
+    <div>
+      <Searchbar />
+    </div>
+  );
 }

@@ -1,12 +1,11 @@
 import React from "react";
-import Searchbar from "../components/scripts/Searchbar";
 
-export const Home: React.FC = () => {
+const Home: React.FC = () => {
   return (
     <div className="dashboard-home">
       {/* Search Section */}
       <div className="dashboard-section">
-        <Searchbar />
+
       </div>
 
       {/* Announcements Section */}
@@ -17,3 +16,5 @@ export const Home: React.FC = () => {
     </div>
   );
 };
+
+export default Home;
