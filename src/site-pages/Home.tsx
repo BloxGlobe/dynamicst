@@ -1,9 +1,9 @@
 export default function Home() {
   return (
     <div className="dashboard-home">
-      {/*  Section */}
+      {/* Dashboard Section */}
       <div className="dashboard-section">
-
+        {/* Content for the main dashboard section */}
       </div>
 
       {/* Announcements Section */}
