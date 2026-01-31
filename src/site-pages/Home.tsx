@@ -1,9 +1,7 @@
-import React from "react";
-
-const Home: React.FC = () => {
+export default function Home() {
   return (
     <div className="dashboard-home">
-      {/* Search Section */}
+      {/*  Section */}
       <div className="dashboard-section">
 
       </div>
@@ -15,6 +13,4 @@ const Home: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Home;
+}
